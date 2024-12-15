@@ -25,25 +25,25 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $roomContr = new RoomsContr();
         $roomContr->editRoom();
 
-        header('Location: /JJF/app/views/user/home.php');
+        header('Location: /finalnafinalproject-1/app/views/user/home.php');
         exit();
     }elseif($action === 'add_room'){
         $roomContr = new RoomsContr();
         $roomContr->addRoom();
 
-        header('Location: /JJF/app/views/user/home.php');
+        header('Location: /finalnafinalproject-1/app/views/user/home.php');
         exit();
     }elseif($action === 'add_tenant'){
         $tenantContr = new TenantsContr();
         $tenantContr->addTenant();
 
-        header('Location: /JJF/app/views/user/newTenants.php');
+        header('Location: /finalnafinalproject-1/app/views/user/newTenants.php');
         exit();
     }elseif($action === 'edit_tenant'){
         $tenantContr = new TenantsContr();
         $tenantContr->upTenant();
 
-        header('Location: /JJF/app/views/user/newTenants.php');
+        header('Location: /finalnafinalproject-1/app/views/user/newTenants.php');
         exit();
         $tenantContr =  new TenantsContr();
         $tenantContr->assign();
@@ -51,27 +51,27 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $tenantContr =  new TenantsContr();
         $tenantContr->assign();
 
-        header('Location: /JJF/app/views/user/newTenants.php');
+        header('Location: /finalnafinalproject-1/app/views/user/newTenants.php');
         exit;
     }
     elseif($action === 'change_room'){
         $tenantContr =  new TenantsContr();
         $tenantContr->changeTenantRoom();
 
-        header('Location: /JJF/app/views/user/tenants.php');
+        header('Location: /finalnafinalproject-1/app/views/user/tenants.php');
         exit;
     }
     elseif($action === 'add_faci'){
         $faciContr = new FaciContr();
         $faciContr->setFacilities();
 
-        header('Location: /JJF/app/views/user/facility.php');
+        header('Location: /finalnafinalproject-1/app/views/user/facility.php');
         exit();
     }elseif($action === 'edit_faci'){
         $faciContr = new FaciContr();
         $faciContr->upFacility();
 
-        header('Location: /JJF/app/views/user/facility.php');
+        header('Location: /finalnafinalproject-1/app/views/user/facility.php');
         exit();
     }
     
@@ -84,40 +84,40 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'){
     if($action === 'edit_room'){
         $roomContr =  new RoomsContr();
         $roomContr->getId();
-        header("Location: /JJF/app/views/edit/roomEdit.php?id=$id");
+        header("Location: /finalnafinalproject-1/app/views/edit/roomEdit.php?id=$id");
     }elseif($action ==='del_room'){
         $roomContr =  new RoomsContr();
         $roomContr->delRoom($id);
-        header("Location: /JJF/app/views/user/home.php");
+        header("Location: /finalnafinalproject-1/app/views/user/home.php");
     }elseif($action ==='manage_room'){
         $roomContr =  new RoomsContr();
         $roomContr->findRoom();
-        header("Location: /JJF/app/views/manage/manageRoom.php?id=$id");
+        header("Location: /finalnafinalproject-1/app/views/manage/manageRoom.php?id=$id");
     }elseif($action ==='checkOut_tenant'){
         $tenantContr =  new TenantsContr();
         $tenantContr->checkOUtTenant();
-        header("Location: /JJF/app/views/user/home.php?id=$id");
+        header("Location: /finalnafinalproject-1/app/views/user/home.php?id=$id");
     }elseif($action ==='del_tenant'){
         $tenantContr =  new TenantsContr();
         $tenantContr->delete($id);
-        header("Location: /JJF/app/views/user/newTenants.php?id=$id");
+        header("Location: /finalnafinalproject-1/app/views/user/newTenants.php?id=$id");
     }elseif($action ==='edit_tenant'){
         $tenantContr =  new TenantsContr();
         $tenantContr->getId();
-        header("Location: /JJF/app/views/edit/tenantEdit.php?id=$id");
+        header("Location: /finalnafinalproject-1/app/views/edit/tenantEdit.php?id=$id");
     }elseif($action ==='assign_tenant'){
-        header("Location: /JJF/app/views/assign/assignTenant.php?id=$id");
+        header("Location: /finalnafinalproject-1/app/views/assign/assignTenant.php?id=$id");
     }elseif($action ==='change_room'){
-        header("Location: /JJF/app/views/edit/changeRoom.php?id=$id");
+        header("Location: /finalnafinalproject-1/app/views/edit/changeRoom.php?id=$id");
     }elseif($action === 'del_faci'){
         $faciContr = new FaciContr();
         $faciContr->delete($id);
-        header("Location: /JJF/app/views/user/facility.php?id=$id");
+        header("Location: /finalnafinalproject-1/app/views/user/facility.php?id=$id");
         exit();
     }elseif($action === 'edit_faci'){
         $faciContr = new FaciContr();
         $faciContr->getId();
-        header("Location: /JJF/app/views/edit/facilityEdit.php?id=$id");
+        header("Location: /finalnafinalproject-1/app/views/edit/facilityEdit.php?id=$id");
         exit();
     }
 

@@ -6,7 +6,7 @@ class Db{
         try {
             // Database configuration
             $host = 'localhost';
-            $dbname = 'dorm_db';
+            $dbname = 'dormdb_sasa';
             $username = 'root';
             $password = '';
 

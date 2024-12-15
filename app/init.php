@@ -6,7 +6,7 @@ if (session_status() === PHP_SESSION_NONE) {
 }
 // Example: Check login status
 if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
-    header('Location: /JJF/public/index.php'); // Correct redirection to the public directory
+    header('Location: /finalnafinalproject-1/public/index.php'); // Correct redirection to the public directory
 
     exit;
 }   

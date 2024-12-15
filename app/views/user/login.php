@@ -1,10 +1,18 @@
+<?php
+
+
+
+
+$error = "";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dormitory Login</title>
-    <link rel="stylesheet" href="/JJF/public/CSS/loginstyles.css">
+    <link rel="stylesheet" href="/finalnafinalproject-1/public/CSS/loginstyles.css">
 </head>
 <body>
     <div class="login-container">
@@ -12,7 +20,7 @@
         <?php if ($error): ?>
             <p class="error-message"><?= htmlspecialchars($error) ?></p>
         <?php endif; ?>
-        <form action="/JJF/public/index.php" method="POST">
+        <form action="/finalnafinalproject-1/public/index.php" method="POST">
             <input type="hidden" name="action" value="login">
             <input type="text" name="username" placeholder="Username" >
             <input type="password" name="password" placeholder="Password" >

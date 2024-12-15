@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register Admin</title>
-    <link rel="stylesheet" href="/JJF/public/CSS/register_styles.css">
+    <link rel="stylesheet" href="/finalnafinalproject-1/public/CSS/register_styles.css">
 </head>
 <body>
     <div class="register-container">
